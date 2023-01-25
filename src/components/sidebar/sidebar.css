@@ -1,0 +1,168 @@
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  width: 250px;
+  background-color: #fafafa;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul .list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+}
+.sidebar ul .active {
+  background-color: #eee;
+  border-radius: 5px;
+}
+.sidebar ul .list-item:hover {
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.sidebar ul .list-item span {
+  padding-left: 10px;
+}
+
+.hide-menu {
+  display: none;
+}
+.show-menu {
+  display: block;
+}
+
+.menu {
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+  width: 150px;
+  box-shadow: 0 0 3px grey;
+  margin: 0px 20px 10px 50px;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.menu .menu-item {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+.menu .menu-item span {
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+.menu .menu-item:hover {
+  background-color: #dddddd;
+}
+
+.profile-container {
+  margin-top: auto;
+  margin-bottom: 7px;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.profile div {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.profile-image {
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: ease-in-out all 0.3s;
+}
+
+.anti-rotate {
+  transform: rotate(180deg);
+  transition: ease-in-out all 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 0 2px grey;
+  }
+  .sidebar ul {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 70%;
+    padding: 0;
+  }
+  .sidebar ul .list-item {
+    height: 100%;
+    padding-top: 26px;
+  }
+  .profile-container {
+    margin-top: 36px;
+    width: 30%;
+    height: 100%;
+  }
+  .profile {
+    justify-content: flex-start;
+  }
+  .menu {
+    position: fixed;
+    bottom: 61px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .list-item {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .username {
+    display: none;
+  }
+  .sidebar {
+    justify-content: space-between;
+  }
+  .profile-container {
+    width: 20%;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 381px) {
+  .list-item {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .profile-container {
+    width: 15%;
+    margin-right: 10px;
+  }
+}

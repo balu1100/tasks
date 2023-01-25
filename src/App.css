@@ -1,0 +1,23 @@
+.container {
+  margin-left: 250px;
+  padding: 10px;
+
+  /* overflow: hidden; */
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./resources/back.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 10px 10px 10px 10px;
+    padding: 4px;
+  }
+}
